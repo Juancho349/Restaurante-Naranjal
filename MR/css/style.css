@@ -1,7 +1,7 @@
 /* Base CSS */
 body {
   color: #666666;
-  background: #fefefe;
+  background: #ffffff;
   font-family: "Cabin", sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -2388,7 +2388,7 @@ section {
 /* End Reservations Section */
 /* Testimonials Slider */
 #testimonials {
-  background: url("../images/testimonials-bg.jpg") no-repeat center;
+  background: url("../images/DSC_6027.jpg") no-repeat center;
   background-size: cover;
   background-color: #192e44;
 }
