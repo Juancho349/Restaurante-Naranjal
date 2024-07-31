@@ -1,4 +1,4 @@
-$("#contactForm").validator().on("submit", function (event) {
+$("#reservationForm").validator().on("submit", function (event) {
     if (event.isDefaultPrevented()) {
         // handle the invalid form...
         formError();
@@ -13,16 +13,18 @@ $("#contactForm").validator().on("submit", function (event) {
  
 function submitForm(){
     // Initiate Variables With Form Content
-    var name = $("#name").val();
-    var email = $("#email").val();
-    var msg_subject = $("#msg_subject").val();
-    var message = $("#message").val();
+    var name = $("#rname").val();
+    var email = $("#remail").val();
+    var phone = $("#rphone").val();
+    var party = $("#party").val();
+    var datetime = $("#datetimepicker1").val();
+    var message = $("#rmessage").val();
  
  
     $.ajax({
         type: "POST",
         url: "php/form-process.php",
-        data: "name=" + name + "&email=" + email + "&msg_subject=" + msg_subject + "&message=" + message,
+        data: "name=" + name + "&email=" + email + "&phone=" + phone + "&party=" + party + "&datetime=" + datetime + "&message=" + message,
         success : function(text){
             if (text == "success"){
                 formSuccess();

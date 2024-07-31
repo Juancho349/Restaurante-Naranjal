@@ -77,29 +77,28 @@
 
 <section id="opening" class="parallax-background">
     <div class="container">
-        <div class="space-80">&nbsp;</div>
         <div class="row">
-            <div class="col-xs-12 opening-box wow fadeInDown first">
+            <div class="col-xs-12 opening-box">
                 <div class="page-header wsub dark text-center">
-                    <h2 class="text-primary">Opening Hours</h2>
+                    <h2 class="text-primary">Hora de Apertura</h2>
                     <div class="separator-line-center primary-bg-color medium-spacing">&nbsp;</div>
-                    <h5 class="sub-title">Reservation required</h5>
+                    <h5 class="sub-title"></h5>
                 </div><!-- / page-header -->
                 <div class="row">
                     <div class="col-md-6 opening-left">
-                        <h3 class="text-primary opening-title space-bottom-30">Monday to Friday</h3>
+                        <h3 class="text-primary opening-title space-bottom-30">Lunes a Viernes</h3>
                         <p class="opening-hours">09:00 AM</p>
                         <div class="separator-line-center primary-bg-color space-top space-bottom">&nbsp;</div>
-                        <p class="opening-hours">11:00 PM</p>
+                        <p class="opening-hours">6:00 PM</p>
                     </div><!-- / opening-left -->
                     <div class="col-md-6 opening-right">
-                        <h3 class="text-primary opening-title space-bottom-30">Saturday to Sunday</h3>
-                        <p class="opening-hours">10:00 AM</p>
+                        <h3 class="text-primary opening-title space-bottom-30">Sábado a Domingo</h3>
+                        <p class="opening-hours">09:00 AM</p>
                         <div class="separator-line-center primary-bg-color space-top space-bottom">&nbsp;</div>
-                        <p class="opening-hours">12:00 PM</p>
+                        <p class="opening-hours">6:00 PM</p>
                     </div><!-- / opening-right -->
                     <div class="col-xs-12">
-                        <p class="opening-text"><a href="#reservations" class="page-scroll">MAKE A RESERVATION</a></p>
+                        <p class="opening-text"><a href="#reservations" class="page-scroll">REALIZA TU RESERVA</a></p>
                     </div>
                 </div><!-- / row -->
             </div><!-- / opening-box -->
@@ -113,61 +112,68 @@
     <div class="container">
         <img src="images/reservations.png" alt="" class="reservations-img wow fadeInDown first">
         <div class="page-header text-center">
-            <h2 class="text-primary">Reservations</h2>
+            <h2 class="text-primary">Reservaciones</h2>
             <div class="separator-line-center large-spacing">&nbsp;</div>
-            <h4 class="sub-title">Monday-Friday: <span class="text-primary">09AM - 11PM</span>&nbsp; | &nbsp;Saturday-Sunday: <span class="text-primary">10AM - 12PM</span></h4>
+            <h4 class="sub-title">Lunes-Viernes: <span class="text-primary">9AM - 6PM</span>&nbsp; | &nbsp;Sábado-Domingo: <span class="text-primary">9AM - 6PM</span></h4>
         </div><!-- / page-header -->
 
-        <div id="reservation-form" class="wow fadeIn first">
-            <form id="reservationForm">
+        <div id="reservation-form">
+            <form id="reservationForm" action="php/form-process.php" method="POST">
                 <div class="row">
                     <div class="col-sm-6 reservation-left-area">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="datetimepicker1" placeholder="DATE & TIME">
-                        </div><!-- / form-group -->
+                            <input type="text" class="form-control" id="datetimepicker1" name="datetime" placeholder="DÍA Y HORA">
+                        </div>
                         <div class="form-group">
+                            <input type="text" class="form-control" id="rphone" name="phone" placeholder="TELÉFONO">
+                        </div>
+                        <!-- / form-group -->
+                        <!-- <div class="form-group">
                             <select class="selectpicker form-control" id="tables">
                                 <optgroup label="TABLE:">
-                                    <option>SINGLE TABLE</option>
+                                    <option>CANTIDAD DE PERSONAS</option>
                                     <option>TABLE</option>
                                     <option>TABLE2</option>
                                     <option>STANDARD</option>
                                     <option>PREMIUM</option>
                                 </optgroup>
                             </select>
-                        </div><!-- / form-group -->
+                        </div>-->
                         <div class="form-group">
-                            <select class="selectpicker form-control" id="party">
-                                <optgroup label="PARTY:">
-                                    <option>SINGLE</option>
+                            <select class="selectpicker form-control" id="party" name="party">
+                                <optgroup label="Cantidad:">
+                                    <option>PERSONAS</option>
+                                    <option>1</option>
                                     <option>2</option>
                                     <option>3</option>
                                     <option>4</option>
                                     <option>5</option>
                                     <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>
+                                    <option>Más de 10</option>
                                 </optgroup>
                             </select>
                         </div><!-- / form-group -->
                     </div>
                     <div class="col-sm-6 reservation-right-area">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="rname" placeholder="FULL NAME">
+                            <input type="text" class="form-control" id="rname" name="name" placeholder="NOMBRE Y APELLIDO">
                         </div><!-- / form-group -->
                         <div class="form-group">
-                            <input type="email" class="form-control" id="remail" placeholder="EMAIL">
-                        </div><!-- / form-group -->
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="rphone" placeholder="PHONE">
+                            <input type="email" class="form-control" id="remail" name="email" placeholder="EMAIL">
                         </div><!-- / form-group -->
                     </div>
                     <!-- textarea and button -->
                     <div class ="col-xs-12 textarea-button">
                         <div class="form-group">
-                            <textarea id="rmessage" class="form-control" rows="5" placeholder="MESSAGE"></textarea>
+                            <textarea id="rmessage" class="form-control" rows="5" name="message" placeholder="MESSAGE"></textarea>
                             <div class="help-block with-errors"></div>
                         </div><!-- / form-group -->
                         <div class="text-center">
-                            <button type="submit" class="btn btn-lg btn-primary-filled btn-form-submit btn-pill wow fadeInUp first"><i class="fa fa-calendar"></i><span><b>MAKE RESERVATION</b></span></button>
+                            <button type="submit" class="btn btn-lg btn-primary-filled btn-form-submit btn-pill wow fadeInUp first"><i class="fa fa-calendar"></i><span><b>REALIZAR RESERVA</b></span></button>
                             <div class="clearfix"></div>
                         </div><!-- / text-center -->
                     </div>

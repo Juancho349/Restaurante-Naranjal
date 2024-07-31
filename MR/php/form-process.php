@@ -15,13 +15,33 @@ if (empty($_POST["email"])) {
 } else {
     $email = $_POST["email"];
 }
- 
-// MSG SUBJECT
-if (empty($_POST["msg_subject"])) {
-    $errorMSG .= "Subject is required ";
+
+// PHONE
+if (empty($_POST["phone"])) {
+    $errorMSG .= "Phone is required ";
 } else {
-    $msg_subject = $_POST["msg_subject"];
+    $phone = $_POST["phone"];
 }
+
+// PARTY
+if (empty($_POST["party"])) {
+    $errorMSG .= "Party size is required ";
+} else {
+    $party = $_POST["party"];
+}
+
+// DATE AND TIME
+if (empty($_POST["datetime"])) {
+    $errorMSG .= "Date and Time are required ";
+} else {
+    $datetime = $_POST["datetime"];
+}
+// // MSG SUBJECT
+// if (empty($_POST["msg_subject"])) {
+//     $errorMSG .= "Subject is required ";
+// } else {
+//     $msg_subject = $_POST["msg_subject"];
+// }
  
  
 // MESSAGE
@@ -32,8 +52,8 @@ if (empty($_POST["message"])) {
 }
  
 //Add your email here
-$EmailTo = "hello@example.com";
-$Subject = "New Message Received";
+$EmailTo = "juanchobedoya4@gmail.com";
+$Subject = "Reservacion Restaurante";
  
 // prepare email body text
 $Body = "";
@@ -43,8 +63,14 @@ $Body .= "\n";
 $Body .= "Email: ";
 $Body .= $email;
 $Body .= "\n";
-$Body .= "Subject: ";
-$Body .= $msg_subject;
+$Body .= "Phone: ";
+$Body .= $phone;
+$Body .= "\n";
+$Body .= "Party Size: ";
+$Body .= $party;
+$Body .= "\n";
+$Body .= "Date and Time: ";
+$Body .= $datetime;
 $Body .= "\n";
 $Body .= "Message: ";
 $Body .= $message;
