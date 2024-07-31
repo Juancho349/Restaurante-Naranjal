@@ -1940,15 +1940,15 @@ table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table
 }
 
 #slider .slide1 {
-  background-image: url("../images/slide1.jpg");
+  background-image: url("../images/DSC_6006.jpg");
 }
 
 #slider .slide2 {
-  background-image: url("../images/slide2.jpg");
+  background-image: url("../images/DSC05313.jpg");
 }
 
 #slider .slide3 {
-  background-image: url("../images/slide3.jpg");
+  background-image: url("../images/DSC05253.jpg");
 }
 
 #slider .slide-text {
@@ -2142,7 +2142,7 @@ section {
 /* End Mini Slider */
 /* About Section */
 #opening {
-  background: url("../images/opening.jpg") no-repeat;
+  background: url("../images/DSC05315.jpg") no-repeat;
   background-size: cover;
   background-position: center;
 }
