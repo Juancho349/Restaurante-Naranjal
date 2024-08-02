@@ -37,12 +37,12 @@ function submitForm(){
 }
  
 function formSuccess(){
-    $("#contactForm");
+    $("#reservationForm");
     submitMSG(true, "Message Sent!")
 }
  
 function formError(){
-    $("#contactForm").removeClass().addClass('animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+    $("#reservationForm").removeClass().addClass('animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
         $(this).removeClass();
     });
 }
