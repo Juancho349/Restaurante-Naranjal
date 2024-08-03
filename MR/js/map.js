@@ -2,7 +2,7 @@ $(function () {
 
     function initMap() {
 
-        var location = new google.maps.LatLng(3.704057294722917, -76.29402699554164);
+        var location = new google.maps.LatLng(3.704133979778348, -76.29404501745266);
 
         var mapCanvas = document.getElementById('map');
         var mapOptions = {
@@ -16,11 +16,7 @@ $(function () {
 
         var marker = new google.maps.Marker({
             position: location,
-<<<<<<< HEAD
-            map: map,
-=======
             map: map  // Sin la propiedad 'icon' para usar el marcador predeterminado
->>>>>>> f1b7df3670d2ed425a56a640e0c4c8160db94c28
         });
 
         var infowindow = new google.maps.InfoWindow({
@@ -37,5 +33,5 @@ $(function () {
         map.set('styles', styles);
     }
 
-    google.maps.event.addDomListener(window, 'load', initMap);
+    google.maps.event.addDomListener(window, 'load', initMap);
 });
