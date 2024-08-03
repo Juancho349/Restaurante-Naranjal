@@ -52,27 +52,27 @@ if (empty($_POST["message"])) {
 }
  
 //Add your email here
-$EmailTo = "juanchobedoya4@gmail.com";
+$EmailTo = "dilan182003@gmail.com";
 $Subject = "Reservacion Restaurante";
  
 // prepare email body text
 $Body = "";
-$Body .= "Name: ";
+$Body .= "Nombre de la persona: ";
 $Body .= $name;
 $Body .= "\n";
-$Body .= "Email: ";
+$Body .= "Correo Electronico: ";
 $Body .= $email;
 $Body .= "\n";
-$Body .= "Phone: ";
+$Body .= "Telefono: ";
 $Body .= $phone;
 $Body .= "\n";
-$Body .= "Party Size: ";
+$Body .= "Cantidad de personas: ";
 $Body .= $party;
 $Body .= "\n";
-$Body .= "Date and Time: ";
+$Body .= "Fecha y hora: ";
 $Body .= $datetime;
 $Body .= "\n";
-$Body .= "Message: ";
+$Body .= "Mensaje adicional: ";
 $Body .= $message;
 $Body .= "\n";
  
@@ -89,5 +89,5 @@ if ($success && $errorMSG == ""){
         echo $errorMSG;
     }
 }
- 
+
 ?>
