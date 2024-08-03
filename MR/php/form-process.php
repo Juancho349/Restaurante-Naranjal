@@ -52,27 +52,27 @@ if (empty($_POST["message"])) {
 }
  
 //Add your email here
-$EmailTo = "juanchobedoya4@gmail.com";
+$EmailTo = "dilan182003@gmail.com";
 $Subject = "Reservacion Restaurante";
  
 // prepare email body text
 $Body = "";
-$Body .= "Name: ";
+$Body .= "Nombre de la persona: ";
 $Body .= $name;
 $Body .= "\n";
-$Body .= "Email: ";
+$Body .= "Correo Electronico: ";
 $Body .= $email;
 $Body .= "\n";
-$Body .= "Phone: ";
+$Body .= "Telefono: ";
 $Body .= $phone;
 $Body .= "\n";
-$Body .= "Party Size: ";
+$Body .= "Cantidad de personas: ";
 $Body .= $party;
 $Body .= "\n";
-$Body .= "Date and Time: ";
+$Body .= "Fecha y hora: ";
 $Body .= $datetime;
 $Body .= "\n";
-$Body .= "Message: ";
+$Body .= "Mensaje adicional: ";
 $Body .= $message;
 $Body .= "\n";
  
@@ -81,13 +81,16 @@ $success = mail($EmailTo, $Subject, $Body, "From:".$email);
  
 // redirect to success page
 if ($success && $errorMSG == ""){
-   echo "success";
+    echo "<script>alert('el correo se envio correctamente');</script>";
+    exit()
 }else{
     if($errorMSG == ""){
-        echo "Something went wrong :(";
-    } else {
+        echo "<script>alert('error al enviar correo');</script>";
+    }else{
         echo $errorMSG;
-    }
+    }  
 }
+
+ 
  
 ?>

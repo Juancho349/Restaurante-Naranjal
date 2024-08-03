@@ -25,9 +25,10 @@ function submitForm(){
         type: "POST",
         url: "php/form-process.php",
         data: "name=" + name + "&email=" + email + "&phone=" + phone + "&party=" + party + "&datetime=" + datetime + "&message=" + message,
+        dataType: "json",
         success : function(text){
-            if (text == "success"){
-                formSuccess();
+            if (response.status == "success"){
+                formSuccess(response.message);
             } else {
                 formError();
                 submitMSG(false,text);
@@ -36,15 +37,36 @@ function submitForm(){
     });
 }
  
-function formSuccess(){
-    $("#reservationForm");
-    submitMSG(true, "Message Sent!")
+function formSuccess(msg){
+    $("#php/form-process.php")[0].reset();
+    submitMSG(true, msg);
+
+    var alertContainer = $("#alert-container");
+    alertContainer.html(`
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>RESERVACION ENVIADA CON EXITO</strong> ${msg}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    `);
 }
- 
+
 function formError(){
-    $("#reservationForm").removeClass().addClass('animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+    $("#php/form-process.php").removeClass().addClass('animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
         $(this).removeClass();
     });
+
+
+    var alertContainer = $("#alert-container");
+    alertContainer.html(`
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Error:</strong> ¡Algo salió mal! Por favor, inténtelo de nuevo.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    `);
 }
  
 function submitMSG(valid, msg){
