@@ -16,11 +16,6 @@ $(function () {
 
         var marker = new google.maps.Marker({
             position: location,
-<<<<<<< HEAD
-            map: map,
-=======
-            map: map  // Sin la propiedad 'icon' para usar el marcador predeterminado
->>>>>>> f1b7df3670d2ed425a56a640e0c4c8160db94c28
         });
 
         var infowindow = new google.maps.InfoWindow({
