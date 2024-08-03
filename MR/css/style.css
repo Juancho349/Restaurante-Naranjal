@@ -1391,6 +1391,7 @@ a.list-group-item .list-group-item-heading, button.list-group-item .list-group-i
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 0.05em;
+  color: #927937;
 }
 
 .panel-default {
@@ -2953,5 +2954,6 @@ footer p {
     padding-bottom: 20px;
   }
 }
+
 /* End Min Widths */
 /* / End Media Screens */

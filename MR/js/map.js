@@ -2,7 +2,7 @@ $(function () {
 
     function initMap() {
 
-        var location = new google.maps.LatLng(3.704133979778348, -76.29404501745266);
+        var location = new google.maps.LatLng(3.704057294722917, -76.29402699554164);
 
         var mapCanvas = document.getElementById('map');
         var mapOptions = {
@@ -11,12 +11,16 @@ $(function () {
             panControl: false,
             scrollwheel: false,
             mapTypeId: google.maps.MapTypeId.ROADMAP
-        }
+        };
         var map = new google.maps.Map(mapCanvas, mapOptions);
 
         var marker = new google.maps.Marker({
             position: location,
+<<<<<<< HEAD
             map: map,
+=======
+            map: map  // Sin la propiedad 'icon' para usar el marcador predeterminado
+>>>>>>> f1b7df3670d2ed425a56a640e0c4c8160db94c28
         });
 
         var infowindow = new google.maps.InfoWindow({
@@ -31,8 +35,6 @@ $(function () {
         var styles = [{"featureType": "landscape", "stylers": [{"saturation": -100}, {"lightness": 65}, {"visibility": "on"}]}, {"featureType": "poi", "stylers": [{"saturation": -100}, {"lightness": 51}, {"visibility": "simplified"}]}, {"featureType": "road.highway", "stylers": [{"saturation": -100}, {"visibility": "simplified"}]}, {"featureType": "road.arterial", "stylers": [{"saturation": -100}, {"lightness": 30}, {"visibility": "on"}]}, {"featureType": "road.local", "stylers": [{"saturation": -100}, {"lightness": 40}, {"visibility": "on"}]}, {"featureType": "transit", "stylers": [{"saturation": -100}, {"visibility": "simplified"}]}, {"featureType": "administrative.province", "stylers": [{"visibility": "off"}]}, {"featureType": "water", "elementType": "labels", "stylers": [{"visibility": "on"}, {"lightness": -25}, {"saturation": -100}]}, {"featureType": "water", "elementType": "geometry", "stylers": [{"hue": "#ffff00"}, {"lightness": -25}, {"saturation": -97}]}];
 
         map.set('styles', styles);
-
-
     }
 
     google.maps.event.addDomListener(window, 'load', initMap);
