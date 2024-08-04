@@ -52,7 +52,7 @@ if (empty($_POST["message"])) {
 }
  
 //Add your email here
-$EmailTo = "dilan182003@gmail.com";
+$EmailTo = "juanchobedoya4@gmail.com";
 $Subject = "Reservacion Restaurante";
  
 // prepare email body text
@@ -81,19 +81,16 @@ $success = mail($EmailTo, $Subject, $Body, "From:".$email);
  
 // redirect to success page
 if ($success && $errorMSG == ""){
-    echo "<script>alert('el correo se envio correctamente');</script>";
-    exit()
+    echo "<script>
+            alert('El correo se envió correctamente');
+            window.location.href = '/MR/reservations.html';
+          </script>";
 }else{
     if($errorMSG == ""){
-        echo "<script>alert('error al enviar correo');</script>";
+        echo "<script>alert('Error al enviar correo');</script>";
     }else{
         echo $errorMSG;
     }  
 }
 
-<<<<<<< HEAD
- 
- 
-=======
->>>>>>> f1b7df3670d2ed425a56a640e0c4c8160db94c28
 ?>
