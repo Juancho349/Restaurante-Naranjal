@@ -83,7 +83,6 @@ $success = mail($EmailTo, $Subject, $Body, "From:".$email);
 if ($success && $errorMSG == ""){
     echo "<script>
             alert('El correo se envió correctamente');
-            window.location.href = '/MR/reservations.html';
           </script>";
 }else{
     if($errorMSG == ""){

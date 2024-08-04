@@ -203,6 +203,10 @@ strong {
   color: #bc9d4b !important;
 }
 
+.text-primaryhoraio {
+  color: #2c1e17 !important;
+}
+
 .text-success {
   color: #93bc49 !important;
 }
@@ -767,6 +771,7 @@ a.btn {
   background: #bc9d4b;
   border: 2px solid #bc9d4b;
 }
+
 
 .btn-primary-filled:hover {
   color: white;
@@ -1457,15 +1462,16 @@ a.list-group-item .list-group-item-heading, button.list-group-item .list-group-i
 /* / End Panels */
 /* Well */
 .well {
-  min-height: 20px;
-  padding: 20px;
-  margin-bottom: 20px;
-  background-color: #ebebeb;
+  min-height: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fff7e8;
   border: 1px solid #cccccc;
   -webkit-box-shadow: none;
   box-shadow: none;
   border-radius: 0;
 }
+
 
 .rounded-well {
   border-radius: 5px;
@@ -1745,7 +1751,7 @@ table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table
 }
 
 .page-nav {
-  background-color: #192e44;
+  background-color: #2c1e17;
   border-bottom: 1px solid rgba(220, 220, 220, 0.35) !important;
 }
 
@@ -1804,7 +1810,7 @@ table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table
 }
 
 .navbar-default.page-nav .navbar-toggle:hover, .navbar-default.page-nav .navbar-toggle:focus {
-  background-color: #192e44;
+  background-color: #275689;
 }
 
 .navbar-default .dropdown-menu > li > a {
@@ -2163,6 +2169,12 @@ section {
   font-weight: 700;
   margin: 0;
 }
+.opening-hourshorario {
+  color: #2c1e17;
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0;
+}
 
 .opening-text {
   color: white;
@@ -2219,7 +2231,7 @@ section {
 /* End Menu Section */
 /* Gallery Section */
 #gallery {
-  background-color: #192e44;
+  background-color: #2c1e17;
 }
 
 #gallery.full-gallery {
@@ -2454,7 +2466,7 @@ section {
 /* End Testimonials Slider */
 /* Contact Section */
 #contact {
-  background-color: #192e44 !important;
+  background-color: #2c1e17 !important;
   padding-top: 0;
 }
 
@@ -2498,7 +2510,7 @@ section {
 /* Content */
 /* Footers */
 footer {
-  background: #192e44;
+  background: #2c1e17;
   border-top: 1px solid #bc9d4b;
 }
 
@@ -2575,7 +2587,7 @@ footer p {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #192e44;
+  background-color: #2c1e17;
   z-index: 999999;
 }
 
