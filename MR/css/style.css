@@ -200,7 +200,7 @@ strong {
 }
 
 .text-primary {
-  color: #bc9d4b !important;
+  color: #e67e22 !important;
 }
 
 .text-primaryhoraio {
@@ -1396,7 +1396,7 @@ a.list-group-item .list-group-item-heading, button.list-group-item .list-group-i
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 0.05em;
-  color: #927937;
+  color: #e67e22;
 }
 
 .panel-default {
