@@ -2182,6 +2182,12 @@ section {
   margin-top: 30px;
   margin-bottom: 0;
 }
+.opening-text2 {
+  color: #2c1e17;
+  font-weight: 700;
+  margin-top: 30px;
+  margin-bottom: 0;
+}
 
 .opening-left {
   border-right: 2px solid rgba(255, 255, 255, 0.77);
