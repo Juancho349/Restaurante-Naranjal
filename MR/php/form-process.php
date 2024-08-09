@@ -80,15 +80,22 @@ $Body .= "\n";
 $success = mail($EmailTo, $Subject, $Body, "From:".$email);
  
 // redirect to success page
-if ($success && $errorMSG == ""){
+if ($success && $errorMSG == "") {
     echo "<script>
             alert('El correo se envió correctamente');
+            window.location.href = '../reservations.html'; // Redirige a un nivel arriba, donde está el archivo HTML
           </script>";
-}else{
-    if($errorMSG == ""){
-        echo "<script>alert('Error al enviar correo');</script>";
-    }else{
-        echo $errorMSG;
+} else {
+    if ($errorMSG == "") {
+        echo "<script>
+                alert('Error al enviar correo');
+                window.location.href = '../reservations.html'; // Redirige a un nivel arriba, donde está el archivo HTML
+              </script>";
+    } else {
+        echo "<script>
+                alert('Error: '+ " . json_encode($errorMSG) . ");
+                window.location.href = '../reservations.html'; // Redirige a un nivel arriba, donde está el archivo HTML después de mostrar el error
+              </script>";
     }  
 }
 
